@@ -153,7 +153,6 @@ const setGasPricePerUser = async (req, res) => {
         const NetworkId = await web3.eth.net.getId();
 
         const transferFunction = await contract.methods.setGasPricePerUser(userByAddress.userAddress, gasPrice).encodeABI();
-        console.log(transferFunction);
 
         const rawTx = {
             from: getAuthority.toLowerCase(),
